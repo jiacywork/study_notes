@@ -1,13 +1,14 @@
 package com.jiacy.app.设计模式.创建型.单例模式;
 
 /**
- * 懒汉模式，在需要使用时开始初始化
+ * 懒汉模式，在需要使用时开始初始化，注重延迟加载
  */
 public class Singleton1 {
 
-    // 添加volatile防止指令重排序，出现多次构建的情况
+    // 添加volatile防止CPU进行指令重排序，导致出现多次构建的情况
     private static volatile Singleton1 singleton = null;
 
+    // 私有构造，防止外部类重复实例化
     private Singleton1() {
         System.out.println("构建过程");
     }

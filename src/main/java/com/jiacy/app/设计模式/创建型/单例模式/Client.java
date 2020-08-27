@@ -5,11 +5,10 @@ package com.jiacy.app.设计模式.创建型.单例模式;
  */
 public class Client {
     public static void main(String[] args) {
+        System.out.println("--------------饿汉模式--------------");
         Singleton singleton1 = Singleton.getInstance();
-        singleton1 = Singleton.getInstance();
 
-        System.out.println("");
+        System.out.println("--------------懒汉模式--------------");
         Singleton1 singleton2 = Singleton1.getInstance();
-        singleton2 = Singleton1.getInstance();
     }
 }
