@@ -1,9 +1,5 @@
 package com.jiacy.app.设计模式.创建型.原型模式;
 
-import com.jiacy.app.设计模式.创建型.原型模式.product.ConcreteUser;
-import com.jiacy.app.设计模式.创建型.原型模式.product.Org;
-import com.jiacy.app.设计模式.创建型.原型模式.product.User;
-
 /**
  * 从已有对象再创建另一个可定制的对象
  *
@@ -17,23 +13,25 @@ import com.jiacy.app.设计模式.创建型.原型模式.product.User;
  */
 public class Client {
 
-    public static void main(String[] args) {
-        User user = new ConcreteUser(24, "兔子");
-        user.setSex(0);
+    public static void main(String[] args) throws CloneNotSupportedException {
         Org org = new Org(1, "动物合伙公司1");
-        user.setOrg(org);
+        User user = new User(1, 1, "兔子", org);
         System.out.println(user.toString());
 
-        User user1 = ((ConcreteUser) user).clone();
+        User user1 = (User) user.clone();
         user1.setName("松鼠");
-        user1.setSex(1);
         user1.getOrg().setOrgId(2);
         user1.getOrg().setOrgName("动物合伙公司2");
         System.out.println(user1.toString());
 
-        User user2 = ((ConcreteUser) user).clone();
+        User user2 = (User) user.clone();
         user2.setId(30);
         System.out.println(user2.toString());
+
+        System.out.println("-----------------------传说中的分割线-------------------------");
+        System.out.println("最终结果：" + user);
+        System.out.println("最终结果：" + user1);
+        System.out.println("最终结果：" + user2);
     }
 
 }

@@ -7,12 +7,12 @@ import java.util.concurrent.*;
  */
 public class MyRunnableClient {
 
-    public static void main(String[] args) throws InterruptedException {
-        int totalCount = 5;
+    private static final int totalCount = 5;
+    private static final CountDownLatch latch = new CountDownLatch(totalCount);
+    private static final Semaphore semaphore = new Semaphore(2);
+    private static final ExecutorService execotor = Executors.newFixedThreadPool(5);
 
-        Semaphore semaphore = new Semaphore(5);
-        CountDownLatch latch = new CountDownLatch(totalCount);
-        ExecutorService execotor = Executors.newFixedThreadPool(5);
+    public static void main(String[] args) throws InterruptedException {
         for(int index = 0; index < totalCount; index++) {
             try {
                 semaphore.acquire();

@@ -1,6 +1,6 @@
-package com.jiacy.app.设计模式.创建型.原型模式.product;
+package com.jiacy.app.设计模式.创建型.原型模式;
 
-public class Org {
+public class Org implements Cloneable {
 
     private int orgId;
     private String orgName;
@@ -32,5 +32,10 @@ public class Org {
                 "orgId=" + orgId +
                 ", orgName='" + orgName + '\'' +
                 '}';
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return super.clone();
     }
 }
