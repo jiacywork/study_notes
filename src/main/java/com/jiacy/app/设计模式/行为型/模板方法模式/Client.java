@@ -13,6 +13,19 @@ public class Client {
 
         abstractClass = new ImplementClassB();
         abstractClass.method();
+
+        Room room = new Room();
+        room.setRoomId(301);
+        room.setAddress("上丰路1111号");
+
+//        AbstractProxy proxy = new RoomDynamicProxy2(new RoomOwnerChuzhu());
+//        AbstractProxy proxy = new RoomDynamicProxy(new RoomOwnerChuzhu());
+//        AbstractProxy proxy = new RoomDynamicProxy2(new RoomOwnerSale());
+//        AbstractProxy proxy = new RoomDynamicProxy(new RoomOwnerSale());
+//        AbstractProxy proxy = new AbstractProxy(new RoomOwnerChuzhu());
+        AbstractProxy proxy = new RoomDynamicProxy3(new RoomOwnerSale());
+        AbstractRoomOwner owner = (AbstractRoomOwner) proxy.getProxyInstace();
+        owner.operate(room);
     }
 
 }

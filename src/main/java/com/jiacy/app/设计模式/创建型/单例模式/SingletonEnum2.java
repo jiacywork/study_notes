@@ -8,7 +8,7 @@ package com.jiacy.app.设计模式.创建型.单例模式;
  */
 public enum SingletonEnum2 implements EnumSingleton {
 
-    INSTANCE {
+        INSTANCE {
         @Override
         public void doSomething() {
             System.out.println("具体操作");

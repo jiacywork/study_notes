@@ -25,7 +25,7 @@ public class Client {
         System.out.println(user1.toString());
 
         User user2 = (User) user.clone();
-        user2.setId(30);
+        user2.setId(3);
         System.out.println(user2.toString());
 
         System.out.println("-----------------------传说中的分割线-------------------------");
