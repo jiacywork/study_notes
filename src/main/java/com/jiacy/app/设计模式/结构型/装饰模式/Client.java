@@ -6,6 +6,7 @@ public class Client {
         AbstractComponent component = new ConcreteCompoment();
         component = new ConcreteDecorator1(component);
         component = new ConcreteDecorator2(component);
+        component = new ConcreteDecorator2(component);
         System.out.println(component.getDesc() + " 的价格是：" + component.getPrice());
     }
 

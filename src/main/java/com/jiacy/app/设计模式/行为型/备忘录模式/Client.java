@@ -15,7 +15,7 @@ public class Client {
         originator.setName("兔子");
         System.out.println(originator.toString());
 
-        // 备份originator
+        // 备份
         Caretaker caretaker = new Caretaker();
         caretaker.setMemento(originator.createMemento());
 

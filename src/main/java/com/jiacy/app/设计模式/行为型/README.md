@@ -1,1 +1,2 @@
 # 行为型模式
+行为型模式（Behavioral Pattern）是对在不同的对象之间划分责任和算法的抽象化，它是 GoF 设计模式中最为庞大的一类模式，包含以下 11 种：模板方法（Template Method）模式、策略（Strategy）模式、命令（Command）模式、职责链（Chain of Responsibility）模式、状态（State）模式、观察者（Observer）模式、中介者（Mediator）模式、迭代器（Iterator）模式、访问者（Visitor）模式、备忘录（Memento)模式、解释器（Interpreter）模式。
