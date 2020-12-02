@@ -8,7 +8,6 @@ public class DoctorVisitor extends Visitor {
     @Override
     public void visitManElement(Boy boy) {
         System.out.println("男孩子生病了, 医生给打针");
-        boy.evaluate(this);
     }
 
     @Override

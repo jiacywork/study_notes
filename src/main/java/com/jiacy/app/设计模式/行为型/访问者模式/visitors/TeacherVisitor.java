@@ -14,7 +14,6 @@ public class TeacherVisitor extends Visitor {
     @Override
     public void visitWomenElement(Girl girl) {
         System.out.println("体育课上，老师让女孩踢毽子");
-        girl.evaluate(this);
     }
 
 }

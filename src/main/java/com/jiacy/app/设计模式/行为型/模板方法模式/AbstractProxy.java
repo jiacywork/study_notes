@@ -23,7 +23,7 @@ public class AbstractProxy implements InvocationHandler {
     };
 
     @Override
-    public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+    public final Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         Room room = (Room) args[0];
         before(room);
         Object object = method.invoke(roomOwner, room);
