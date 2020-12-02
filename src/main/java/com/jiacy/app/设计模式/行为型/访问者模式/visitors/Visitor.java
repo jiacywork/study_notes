@@ -9,8 +9,8 @@ import com.jiacy.app.设计模式.行为型.访问者模式.elements.Girl;
  */
 public abstract class Visitor {
 
-    public abstract void visitManElement(Boy boy);
+    public abstract void visitBoyElement(Boy boy);
 
-    public abstract void visitWomenElement(Girl girl);
+    public abstract void visitGirlElement(Girl girl);
 
 }

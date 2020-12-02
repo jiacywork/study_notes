@@ -8,7 +8,7 @@ public class Girl extends Element {
 
     @Override
     public void accept(Visitor visitor) {
-        visitor.visitWomenElement(this);
+        visitor.visitGirlElement(this);
     }
 
     public void evaluate(Visitor visitor) {
