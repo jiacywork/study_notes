@@ -62,12 +62,12 @@ public class User implements Cloneable {
         System.out.println("克隆对象");
 
         // 浅克隆，克隆简单数据类型
-//        return super.clone();
-
-        // 深克隆
-        User user = (User) super.clone();
-            // 对引用对象进行单独克隆
-        user.org = (Org) user.org.clone();
-        return user;
+        return super.clone();
+//
+//        // 深克隆
+//        User user = (User) super.clone();
+//            // 对引用对象进行单独克隆
+//        user.org = (Org) user.org.clone();
+//        return user;
     }
 }
